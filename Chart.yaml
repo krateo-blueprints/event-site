@@ -1,0 +1,5 @@
+apiVersion: v2
+name: event-site
+icon: https://raw.githubusercontent.com/krateo-platformops/.github/main/brand/logo.svg
+type: application
+version: 0.1.0
