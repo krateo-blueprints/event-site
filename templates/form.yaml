@@ -1,0 +1,10 @@
+apiVersion: acmefeedback.example.io/v1alpha1
+kind: Form
+metadata:
+  name: {{ printf "%s-form" $.Release.Name | trunc 63 | trimSuffix "-" }}
+  namespace: {{ $.Release.Namespace }}
+spec:
+  title: {{ .Values.surveyTitle }}
+  configurationRef:
+    name: acme-feedback-form
+    namespace: krateo-system

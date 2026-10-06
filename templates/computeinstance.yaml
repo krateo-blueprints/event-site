@@ -1,0 +1,15 @@
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeInstance
+metadata:
+  name: {{ printf "%s-computeinstance" $.Release.Name | trunc 63 | trimSuffix "-" }}
+  namespace: {{ $.Release.Namespace }}
+spec:
+  machineType: {{ .Values.machineType }}
+  zone: us-central1-a
+  bootDisk:
+    initializeParams:
+      sourceImageRef:
+        external: debian-cloud/debian-12
+  networkInterface:
+    - networkRef:
+        external: default

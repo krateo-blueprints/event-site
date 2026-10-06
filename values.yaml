@@ -1,0 +1,10 @@
+image: "ghcr.io/krateo-blueprints/event-site-app:0.1.0"
+replicas: 1
+resources:
+  cpuRequest: "100m"
+  cpuLimit: "500m"
+  memoryRequest: "128Mi"
+  memoryLimit: "256Mi"
+probePath: "/"
+surveyTitle: "Event feedback"
+machineType: "e2-small"
