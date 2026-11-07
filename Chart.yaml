@@ -3,3 +3,12 @@ name: event-site
 icon: https://raw.githubusercontent.com/krateo-platformops/.github/main/brand/logo.svg
 type: application
 version: 0.1.0
+keywords:
+  - web
+  - gcp
+  - compute
+  - feedback
+sources:
+  - https://github.com/krateo-blueprints/event-site
+annotations:
+  krateo.io/source-repo: krateo-blueprints/event-site
